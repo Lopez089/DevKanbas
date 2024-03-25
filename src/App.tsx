@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Container } from './components/container';
+import { ContainerTask } from './containers/containerTask';
 import { task } from './interfaces';
 
 const fakeData: task[] = [
   {
     id: 'lkjlhiugig',
-    task: 'hacer de comer'
+    task: 'hacer de comer, carne con tomate'
   },
   {
     id: 'lkjdsfasdfaslhiugig',
@@ -14,6 +15,10 @@ const fakeData: task[] = [
   {
     id: '2345keijf',
     task: 'correr'
+  },
+  {
+    id: 'lore',
+    task: "Laborum aute ea cupidatat sint anim consectetur deserunt reprehenderit Lorem enim. Incididunt sint proident "
   }
 ]
 
@@ -23,7 +28,7 @@ const App = () => {
     <>
       <main>
         <Container>
-          <h1 className="text-3xl font-bold underline">hola</h1>
+          <ContainerTask tasks={task} />
         </Container>
       </main>
     </>
