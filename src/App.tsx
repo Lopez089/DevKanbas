@@ -22,13 +22,16 @@ const fakeData: task[] = [
   }
 ]
 
+
+
 const App = () => {
-  const [task, seTask] = useState(fakeData)
+  const [task, setTask] = useState<task[]>(fakeData)
+  const [newTask, setNewTask] = useState(false)
   return (
     <>
       <main>
         <Container>
-          <ContainerTask tasks={task} />
+          <ContainerTask tasks={task} newTask={newTask} setNewTask={setNewTask} setTask={setTask} />
         </Container>
       </main>
     </>
