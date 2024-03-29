@@ -1,5 +1,9 @@
-export const card = () => {
+interface card {
+  children: JSX.Element
+}
+
+export const Card = ({ children }: card) => {
   return (
-    <div>card</div>
+    <article className="w-64  min-h-32 p-6 border rounded-xl shadow-md">{children}</article>
   )
 }
